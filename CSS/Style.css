@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:active,a:visited,a:link{
+    text-decoration: none;
+}
+
+.content{
+    display:flex;
+}
+
+/*-----------------------------------------------Logo and Symbol--------------------------------------------------------*/
+.left-side{
+    flex: 1 1 auto;
+    height: 100vh;
+    background-image: url("../Asset/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tag{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.479);
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    margin: 120px 0px;
+}
+
+.tag>p{
+    margin-left: 6px;
+    display: inline;
+    font-size: 3em;
+    position: relative;
+    top:25px;
+    color: white;
+}
+
+.tag>img{
+    width: 70px;
+    height: 95px;
+}
+
+.credit{
+    font-size: smaller;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.credit a{
+    color: white;
+}
+
+/*---------------------------------------------------Form content--------------------------------------------------------*/
+.right-side{
+    flex: 2 1 auto;
+    padding: 5vw 0px;
+    background-color: #688b4c;
+}
+
+.right-side>p{
+    margin: 40px 0px 50px 50px;
+    font-size: 3em;
+}
+
+.form{
+    padding: 2% 5%;
+    margin: 6vh 0px;
+    background-color: #9bbd80;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    padding: 2px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 20%;
+    height: 10%;
+    background-color: #596D48;
+    border-radius: 10px;
+    border: none;
+    margin-left: 5%;
+}
+
+.right-side a{
+    color: black;
+}
+
+.login_redirect{
+    margin: 20px 0px;
+    margin-left: 5%;
+}

@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
-    
+    <div class="content">
+        <div class="left-side">
+            <div class="tag">
+                <img src="/Asset/logo.png">
+                <p>ODIN</p>
+            </div>
+            <div class="credit">
+                <p>Photo by <a href="">Halie West</a> on <a href="">Unsplash</a></p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <p>Get Started</p>
+
+            <div class="form">
+                <form action="" id="signUp">
+                    <div class="flex-container">
+                        <div class="form1">
+                            <div>
+                                <input type="text" name="fname" id="fname" placeholder="a">
+                                <label for="fname">FIRST NAME</label>
+                            </div>
+                            <div>
+                                <input type="email" name="email" id="email" placeholder="a">
+                                <label for="">EMAIL</label>
+                            </div>
+                            <div>
+                                <input type="password" name="password" id="password" placeholder="a">
+                                <label for="">PASSWORD</label>
+                            </div>
+                        </div>
+                        <div class="form2">
+                            <div>
+                                <input type="text" name="lname" id="lname" placeholder="a">
+                                <label for="">LAST NAME</label>
+                            </div>
+                            <div>
+                                <input type="tel" name="number" id="number" placeholder="a">
+                                <label for="">PHONE NUMBER</label>
+                            </div>
+                            <div>
+                                <input type="password" name="confirm" id="confirm" placeholder="a">
+                                <label for="">CONFIRM PASSWORD</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button type="submit" form="signUp">
+                Create Account
+            </button>
+            <div class="login_redirect">
+              Already have an account? <a href="">Log in</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
