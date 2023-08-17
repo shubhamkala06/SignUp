@@ -1,7 +1,13 @@
 *{
     box-sizing: border-box;
+}
+
+body{
+    height: 100dvh;
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family:"lato",sans-serif;
 }
 
 a:active,a:visited,a:link{
@@ -10,94 +16,83 @@ a:active,a:visited,a:link{
 
 .content{
     display:flex;
+    height: 100%;
 }
 
-/*-----------------------------------------------Logo and Symbol--------------------------------------------------------*/
+/*-----------------------------------------------------Left Side---------------------------------------------------------*/
 .left-side{
-    flex: 1 1 auto;
-    height: 100vh;
+    flex-grow: 1;
+    height: 100%;
     background-image: url("../Asset/background.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+/*-----Name and Logo-----*/
 .tag{
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.479);
-    opacity: 0.9;
-    display: flex;
+    display:flex;
     justify-content: center;
-    margin: 120px 0px;
-}
-
-.tag>p{
-    margin-left: 6px;
-    display: inline;
-    font-size: 3em;
-    position: relative;
-    top:25px;
-    color: white;
+    align-items: center;
+    gap: min(1vw, 6px);
+    background-color: rgb(0, 0, 0);
+    opacity: 0.75;
+    margin-top: 25%;
 }
 
 .tag>img{
-    width: 70px;
-    height: 95px;
+    height: clamp(50px,80%,95px);
+    width: clamp(35px,6vw,78px);
 }
 
+.tag>p{
+    font-size: clamp(1rem,3vw,3.5rem);
+    color: white;
+}
+
+/*-----Credit-----*/
 .credit{
-    font-size: smaller;
-    display: flex;
-    justify-content: center;
+    color: white;
+    font-size: clamp(8px,2vw,12px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.credit>p>a{
     color: white;
 }
 
-.credit a{
-    color: white;
-}
-
-/*---------------------------------------------------Form content--------------------------------------------------------*/
+/*-----------------------------------------------------Right Side---------------------------------------------------------*/
 .right-side{
-    flex: 2 1 auto;
-    padding: 5vw 0px;
-    background-color: #688b4c;
+    flex-grow: 3;
+    height: 100%;
+    background-color: rgb(238, 234, 225);
+    padding: 5% 0%;
 }
 
+/*-----Heading-----*/
 .right-side>p{
-    margin: 40px 0px 50px 50px;
-    font-size: 3em;
+    font-weight: bold;
+    font-size: clamp(2rem,5vw,3.2rem);
+    padding: 0px 6%;
 }
 
+/*-----Form-----*/
 .form{
-    padding: 2% 5%;
-    margin: 6vh 0px;
-    background-color: #9bbd80;
+    padding: 10% 0px;
+    background-color:white;
+    padding: 5%;
 }
 
-.flex-container{
+.fieldsContainer{
     display: flex;
     justify-content: space-between;
 }
 
-button{
-    padding: 2px;
-    font-size: 1rem;
-    font-weight: bold;
-    width: 20%;
-    height: 10%;
-    background-color: #596D48;
-    border-radius: 10px;
-    border: none;
-    margin-left: 5%;
-}
 
-.right-side a{
-    color: black;
-}
+/*-----Button-----*/
 
-.login_redirect{
-    margin: 20px 0px;
-    margin-left: 5%;
-}
+/*-----Login-----*/
