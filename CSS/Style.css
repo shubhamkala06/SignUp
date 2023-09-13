@@ -1,3 +1,8 @@
+:root{
+    --grassGreen : #596D48;
+    --shadow:rgb(180, 180, 180);
+}
+
 *{
     box-sizing: border-box;
 }
@@ -65,12 +70,15 @@ a:active,a:visited,a:link{
     color: white;
 }
 
+.credit>p>a:hover{
+    text-decoration: underline;
+    cursor: default;
+}
 /*-----------------------------------------------------Right Side---------------------------------------------------------*/
 .right-side{
     flex-grow: 3;
     height: 100%;
     background-color: rgb(238, 234, 225);
-    padding: 5% 0%;
 }
 
 /*-----Heading-----*/
@@ -82,17 +90,130 @@ a:active,a:visited,a:link{
 
 /*-----Form-----*/
 .form{
-    padding: 10% 0px;
+    height: 40vh;
     background-color:white;
-    padding: 5%;
+    padding: 3% 5%;
+    box-shadow: rgb(180, 180, 180) 0px 2px 2.5px,var(--shadow) 0px -0.5px 1.5px;
 }
 
 .fieldsContainer{
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    gap: clamp(0px,15vw,200px);
 }
 
+.form1,.form2{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.inputs{
+    position: relative;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+input{
+    font-size: 16px;
+    padding-left: 5px;
+    border: 1.8px solid rgb(5, 5, 5);
+    height: clamp(18px,10vh,45px);
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+    background: none;
+}
+
+label{
+    transition: top 0.4s,left 0.4s;
+    height: clamp(18px,2rem,21px);
+    overflow: hidden;
+    font-size: clamp(12px,95%,1rem);
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    font-weight: lighter;
+}
+
+input::placeholder{
+    color: transparent;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid var(--grassGreen);
+}
+
+input:focus + label{
+    font-size: clamp(11px,90%,12.5px);
+    top: -8px;
+    left: 5px;
+    background-color: white;
+    z-index: 10;
+    color: rgb(43, 85, 43);
+    font-weight: 600;
+}
+
+input:not(:placeholder-shown) + label{
+    font-size: clamp(11px,90%,12.5px);
+    top: -8px;
+    left: 5px;
+    background-color: white;
+    z-index: 10;
+    color: rgb(43, 85, 43);
+    font-weight: 600;
+}
+
+.error{
+    opacity: 0;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(59, 59, 59);
+    position: absolute;
+    bottom: -100px;
+    width: 73.6%;
+    border-radius: 10px;
+    height: 55px;
+    transition: opacity 0.5s;
+}
 
 /*-----Button-----*/
+button{
+    box-shadow: rgb(160, 160, 160) 2px 2px 2.5px;
+    padding: 1.5% 2%;
+    color: white;
+    font-size: clamp(0.6rem,2vw,1.4rem);
+    width: 25%;
+    height: max-content;
+    margin-top: 3%;
+    margin-left: 6%;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: var(--grassGreen);
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}
 
 /*-----Login-----*/
+.login_redirect{
+    margin-top: 5%;
+    padding: 0px 6%;   
+}
+
+.login_redirect>a{
+    color: black;
+}
+
+.login_redirect>a:hover{
+    text-decoration: underline;
+    cursor: default;
+}
